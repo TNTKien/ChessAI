@@ -4,7 +4,7 @@ var undo_stack = [];
 
 var globalSum = 0; // always from black's perspective. Negative for white's perspective.
 var board = null;
-var $board = $('#myBoard');
+var $board = $('#board');
 
 var whiteSquareGrey = '#a9a9a9';
 var blackSquareGrey = '#696969';
@@ -25,7 +25,7 @@ var config = {
   onSnapEnd: onSnapEnd,
 };
 
-board = new Chessboard('myBoard', config);
+board = new Chessboard('board', config);
 var chess = Chess();
 
 
@@ -296,7 +296,7 @@ function showHint() {
 
 
 function greySquare(square) {
-  var $square = $('#myBoard .square-' + square);
+  var $square = $('#board .square-' + square);
 
   var background = whiteSquareGrey;
   if ($square.hasClass('black-3c85d')) {
@@ -306,7 +306,7 @@ function greySquare(square) {
   $square.css('background', background);
 }
 function removeGreySquares() {
-  $('#myBoard .square-55d63').css('background', '');
+  $('#board .square-55d63').css('background', '');
 }
 function onDragStart(source, piece) {
   // do not pick up pieces if the game is over

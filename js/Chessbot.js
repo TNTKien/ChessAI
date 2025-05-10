@@ -185,10 +185,10 @@ function evaluateBoard(chess, move, prevSum, color) {
             prevSum += pstSelf[move.color][move.piece][from[0]][from[1]];
             prevSum -= pstSelf[move.color][move.piece][to[0]][to[1]];
         } else {
-            console.log(prevSum)
+            // console.log(prevSum)
             prevSum -= pstSelf[move.color][move.piece][from[0]][from[1]];
             prevSum += pstSelf[move.color][move.piece][to[0]][to[1]];
-            console.log(prevSum)
+            // console.log(prevSum)
 
         }
     }
